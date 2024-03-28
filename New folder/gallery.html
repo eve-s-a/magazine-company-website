@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L33t H4x</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
+    <script src="script.js"></script>
+    <style>
+        * {box-sizing: border-box;}
+
+        body {
+            background-color: black;
+        }
+
+        p {
+            color: white;
+            font-family: Oswald, sans-serif;
+        }
+
+        .daddysearchbar .searchbar {
+            float: right;
+            padding-top: 25px;
+        }
+
+        .daddysearchbar input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+            text-align: left;
+        }
+
+        .daddysearchbar .searchbar button {
+            float: right;
+            border: 1px solid black;
+            cursor: pointer;
+            background-color: black;
+        }
+
+        @media screen and (max-width: 600px) {
+            .daddysearchbar .searchbar {
+                float: none;
+            }
+            .daddysearchbar a, .daddysearchbar input[type=text], .daddysearchbar .searchbar button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+            .daddysearchbar input[type=text] {
+                border: 1px solid #ccc;  
+            }
+        }
+
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: blueviolet;
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: Oswald, sans-serif;
+        }
+
+        .nav li a:hover {
+            background-color: mediumorchid;
+        }
+
+        h3 {
+            color: white;
+            background-color: blue;
+            width: 400px;
+            height: 25px;
+            text-align: center;
+            font-family: "Noto Sans", sans-serif;
+        }
+
+        .previousissues {
+            text-align: center;
+        }
+
+        .previousissues img:hover {
+            transition: all 0.3s ease-in;
+            opacity: 1;
+            transform: scale(1.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="daddysearchbar">
+        <div class="searchbar">
+            <form action="">
+                <input type="text" name="search">
+                <button type="submit"><img src="search.png" style="width:45px;max-width:100%;"></button>
+            </form>
+        </div>
+    </div>
+    <img src="logo.PNG" alt="company logo" style="width:25%;max-width:100%;">
+    <div class="nav">
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contactus.html">Contact us</a></li>
+            <li><a href="gaming.html">Gaming</a></li>
+        </ul>
+    </div>
+    <br>
+    <div class ="section2a">
+        <h3>Previous issues</h3>
+        <br>
+        <div class="previousissues">
+            <img src="1.png" alt="sample 1" style="width:200px;height:300px;max-width:100%;">
+            <img src="2.png" alt="sample 2" style="width:200px;height:300px;max-width:100%;">
+            <img src="3.png" alt="sample 3" style="width:200px;height:300px;max-width:100%;">
+            <img src="4.png" alt="sample 4" style="width:200px;height:300px;max-width:100%;">
+            <img src="5.png" alt="sample 5" style="width:200px;height:300px;max-width:100%;">
+            <img src="6.png" alt="sample 6" style="width:200px;height:300px;max-width:100%;">
+        </div>
+        <br>
+    </div>
+</body>
+</html>

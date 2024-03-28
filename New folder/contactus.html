@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L33t H4x</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
+    <script src="script.js"></script>
+    <style>
+        * {box-sizing: border-box;}
+
+        body {
+            background-color: black;
+        }
+
+        p {
+            color: white;
+            font-family: Oswald, sans-serif;
+        }
+
+        .daddysearchbar .searchbar {
+            float: right;
+            padding-top: 25px;
+        }
+
+        .daddysearchbar input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+            text-align: left;
+        }
+
+        .daddysearchbar .searchbar button {
+            float: right;
+            border: 1px solid black;
+            cursor: pointer;
+            background-color: black;
+        }
+
+        @media screen and (max-width: 600px) {
+            .daddysearchbar .searchbar {
+                float: none;
+            }
+            .daddysearchbar a, .daddysearchbar input[type=text], .daddysearchbar .searchbar button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+            .daddysearchbar input[type=text] {
+                border: 1px solid #ccc;  
+            }
+        }
+
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: blueviolet;
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: Oswald, sans-serif;
+        }
+
+        .nav li a:hover {
+            background-color: mediumorchid;
+        }
+
+        h3 {
+            color: white;
+            background-color: blue;
+            width: 400px;
+            height: 25px;
+            text-align: center;
+            font-family: "Noto Sans", sans-serif;
+        }
+
+        .contactform {
+            color: white;
+        }
+
+        .socials {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        h4 {
+            color: white;
+            background-color: magenta;
+            width: 400px;
+            height: 25px;
+            float: right;
+            text-align: center;
+            font-family: "Noto Sans", sans-serif;
+        }
+
+        .map {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="daddysearchbar">
+        <div class="searchbar">
+            <form action="">
+                <input type="text" name="search">
+                <button type="submit"><img src="search.png" style="width:45px;max-width:100%;"></button>
+            </form>
+        </div>
+    </div>
+    <img src="logo.PNG" alt="company logo" style="width:25%;max-width:100%;">
+    <div class="nav">
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contactus.html">Contact us</a></li>
+            <li><a href="gaming.html">Gaming</a></li>
+        </ul>
+    </div>
+    <br>
+    <div class="section3a">
+        <h3>Contact form</h3>
+        <br>
+        <div class="contactform">
+            <form action="" id="contactForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" style="border:2px solid white;color:white;background:none;"><br>
+                <br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" style="border:2px solid white;color:white;background:none;width:225px;"><br>
+                <br>
+                <label for="submission">Submission:</label><br>
+                <input type="text" id="submission" name="submission" style="border:2px solid white;color:white;background:none;width:325px;padding-bottom:75px;"><br><br>
+                <input type="submit" value="Submit" style="border:2px solid blue;color:white;background:none;width:125px;cursor:pointer;">
+            </form>
+        </div>
+    </div>
+    <div class="section3b">
+        <div class="socials">
+            <ul>
+                <li><a href="https://en-gb.facebook.com/WykeSixthFormCollege/"><img src="facebooklogo.png" style="width:45px;max-width:100%;"></a></li>
+                <li><a href="https://twitter.com/wykecollege"><img src="xlogo.jpg" style="width:45px;max-width:100%;"></a></li>
+                <li><a href="https://www.instagram.com/wykesfc/"><img src="instagramlogo.jpg" style="width:75px;max-width:100%;"></a></li>
+                <li><a href="https://www.youtube.com/channel/UCAUnzj34_EdeVLOcb6fg5kw"><img src="youtubelogo.jpg" style="width:55px;max-width:100%;"></a></li>
+                <li><a href="https://www.twitch.tv/wykegames"><img src="twitchlogo.jpg" style="width:50px;max-width:100%;"></a></li>
+                <li><a href="https://www.tiktok.com/@wykesfc"><img src="tiktoklogo.jpg" style="width:50px;max-width:100%;"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="section3c">
+        <h4>Where we're based</h4>
+        <br><br>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2358.4425158108725!2d-0.3917437240316176!3d53.763809172413254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4878bf96e280ac5b%3A0xbebe6b1a2f2ae8!2sWyke%20Sixth%20Form%20College!5e0!3m2!1sen!2suk!4v1711209104735!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <br>
+    </div>
+</body>
+</html>

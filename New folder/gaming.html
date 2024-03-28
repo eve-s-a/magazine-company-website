@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L33t H4x</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
+    <script src="script.js"></script>
+    <style>
+        * {box-sizing: border-box;}
+
+        body {
+            background-color: black;
+        }
+
+        p {
+            color: white;
+            font-family: Oswald, sans-serif;
+        }
+
+        .daddysearchbar .searchbar {
+            float: right;
+            padding-top: 25px;
+        }
+
+        .daddysearchbar input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+            text-align: left;
+        }
+
+        .daddysearchbar .searchbar button {
+            float: right;
+            border: 1px solid black;
+            cursor: pointer;
+            background-color: black;
+        }
+
+        @media screen and (max-width: 600px) {
+            .daddysearchbar .searchbar {
+                float: none;
+            }
+            .daddysearchbar a, .daddysearchbar input[type=text], .daddysearchbar .searchbar button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+            .daddysearchbar input[type=text] {
+                border: 1px solid #ccc;  
+            }
+        }
+
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: blueviolet;
+        }
+
+        .nav li {
+            float: left;
+        }
+
+        .nav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: Oswald, sans-serif;
+        }
+
+        .nav li a:hover {
+            background-color: mediumorchid;
+        }
+
+        h3 {
+            color: white;
+            background-color: blue;
+            width: 400px;
+            height: 25px;
+            text-align: center;
+            font-family: "Noto Sans", sans-serif;
+        }
+
+        h4 {
+            color: white;
+            background-color: magenta;
+            width: 400px;
+            height: 25px;
+            float: right;
+            text-align: center;
+            font-family: "Noto Sans", sans-serif;
+        }
+
+        .ytvideo {
+            float: right;
+        }
+    </style>
+</head>
+<body onload="NextQuestion(0)">
+    <div class="daddysearchbar">
+        <div class="searchbar">
+            <form action="">
+                <input type="text" name="search">
+                <button type="submit"><img src="search.png" style="width:45px;max-width:100%;"></button>
+            </form>
+        </div>
+    </div>
+    <img src="logo.PNG" alt="company logo" style="width:25%;max-width:100%;">
+    <div class="nav">
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contactus.html">Contact us</a></li>
+            <li><a href="gaming.html">Gaming</a></li>
+        </ul>
+    </div>
+    <br>
+    <div class="section4a">
+        <h3>Gaming quiz</h3>
+        <main>
+            <!-- creating a modal for when quiz ends -->
+            <div class="modal-container" id="score-modal">
+    
+                <div class="modal-content-container">
+    
+                    <h1>Congratulations, Quiz Completed.</h1>
+    
+                    <div class="grade-details">
+                        <p>Attempts : 5</p>
+                        <p>Wrong Answers : <span id="wrong-answers"></span></p>
+                        <p>Right Answers : <span id="right-answers"></span></p>
+                        <p>Grade : <span id="grade-percentage"></span>%</p>
+                        <p ><span id="remarks"></span></p>
+                    </div>
+    
+                    <div class="modal-button-container">
+                        <button onclick="closeScoreModal()">Continue</button>
+                    </div>
+    
+                </div>
+            </div>
+    <!-- end of modal of quiz details-->
+    
+            <div class="game-quiz-container">
+    
+                <div class="game-details-container">
+                    <h1>Score : <span id="player-score"></span> / 5</h1>
+                    <h1> Question : <span id="question-number"></span> / 5</h1>
+                </div>
+    
+                <div class="game-question-container">
+                    <h1 id="display-question"></h1>
+                </div>
+    
+                <div class="game-options-container">
+    
+                   <div class="modal-container" id="option-modal">
+    
+                        <div class="modal-content-container">
+                             <h1>Please Pick An Option</h1>
+    
+                             <div class="modal-button-container">
+                                <button onclick="closeOptionModal()">Continue</button>
+                            </div>
+    
+                        </div>
+    
+                   </div>
+    
+                    <span>
+                        <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                        <label for="option-one" class="option" id="option-one-label"></label>
+                    </span>
+    
+    
+                    <span>
+                        <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                        <label for="option-two" class="option" id="option-two-label"></label>
+                    </span>
+    
+    
+                    <span>
+                        <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                        <label for="option-three" class="option" id="option-three-label"></label>
+                    </span>
+    
+                </div>
+    
+                <div class="next-button-container">
+                    <button onclick="handleNextQuestion()">Next</button>
+                </div>
+    
+            </div>
+        </main>
+    </div>
+    <div class="section4b">
+        <h4>Game creation tutorial</h4>
+        <br><br>
+        <div class="ytvideo">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MQogwR0uoSY?si=O_wTcjUPBnfPcvW0"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br>
+    </div>
+</body>
+</html>
